@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,72 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TextReco" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9zg-hZ-Dxe">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9zg-hZ-Dxe" secondAttribute="height" multiplier="1:1" id="Fq2-ac-p4s"/>
+                                </constraints>
+                            </view>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dMr-kI-hHL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QI-Fj-KWi">
+                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                <color key="backgroundColor" red="0.011764705882352941" green="0.65578235035211263" blue="0.56862745098039214" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ucz-QS-Lxu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Capture">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GJT-Nm-lSQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click capture to get started" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NfB-ai-PBS">
+                                <rect key="frame" x="16" y="414" width="382" height="382"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9zg-hZ-Dxe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0cx-Nx-ZRq"/>
+                            <constraint firstItem="dMr-kI-hHL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6oA-IN-5Sc"/>
+                            <constraint firstItem="NfB-ai-PBS" firstAttribute="top" secondItem="9zg-hZ-Dxe" secondAttribute="bottom" id="EtG-EI-DNd"/>
+                            <constraint firstItem="9zg-hZ-Dxe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FYE-zy-6Yq"/>
+                            <constraint firstItem="dMr-kI-hHL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JBB-fI-0mA"/>
+                            <constraint firstItem="dMr-kI-hHL" firstAttribute="height" secondItem="9zg-hZ-Dxe" secondAttribute="height" id="KEv-9p-Zr7"/>
+                            <constraint firstItem="7QI-Fj-KWi" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="QuS-mW-qd7"/>
+                            <constraint firstItem="7QI-Fj-KWi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TuE-dW-ckt"/>
+                            <constraint firstItem="dMr-kI-hHL" firstAttribute="width" secondItem="9zg-hZ-Dxe" secondAttribute="width" id="Xq1-gy-D5c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7QI-Fj-KWi" secondAttribute="trailing" id="ZOr-96-xA8"/>
+                            <constraint firstItem="NfB-ai-PBS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ag8-Ga-7d4"/>
+                            <constraint firstItem="9zg-hZ-Dxe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dKv-OH-eBI"/>
+                            <constraint firstItem="NfB-ai-PBS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hLD-DK-gJt"/>
+                            <constraint firstItem="7QI-Fj-KWi" firstAttribute="top" secondItem="NfB-ai-PBS" secondAttribute="bottom" id="y5I-Gz-rBf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NfB-ai-PBS" secondAttribute="trailing" constant="16" id="yId-Ap-cNr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="actionButton" destination="7QI-Fj-KWi" id="O8j-ov-y0S"/>
+                        <outlet property="cameraView" destination="9zg-hZ-Dxe" id="Rf8-JF-Ftk"/>
+                        <outlet property="messageView" destination="NfB-ai-PBS" id="3kL-tD-NZL"/>
+                        <outlet property="previewView" destination="dMr-kI-hHL" id="fvZ-Og-zQi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
